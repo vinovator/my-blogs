@@ -6,12 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **content/writing repository** — a vault of long-form blog posts written in Markdown, not a software project. There is no application code, no build system, no tests, and no `package.json`. Work here is almost always editing prose, frontmatter, or managing images, not running commands.
 
-The repo is set up to publish via **Quartz** (the `upstream` remote points at `jackyzha0/quartz`) over an **Obsidian** vault, but no Quartz tooling is installed in the working tree yet — only content is tracked (`git ls-files` shows just `.gitignore`, the post `.md`, and its images). The `.gitignore` is pre-configured for the eventual Quartz build (`public/`, `.quartz-cache/`, `node_modules/`) and Obsidian (`.obsidian/`, `.trash/`). Notably, it excludes binary office/PDF/zip files but **does commit images** (`.png` etc. under `Images/` are tracked).
+The repo holds **content only** — only the post `.md`, its images, and config files are tracked (`git ls-files` confirms). No site generator or tooling is installed in the working tree. The writings are planned to publish at **vinothhaldorai.com/thoughts**; the publishing pipeline is in flux, so keep changes to content and don't assume a particular generator. The `.gitignore` still lists some legacy build/vault paths (`public/`, `.quartz-cache/`, `node_modules/`, `.obsidian/`); these can be cleaned up as the publishing setup settles. Notably, it excludes binary office/PDF/zip files but **does commit images** (`.png` etc. under `Images/` are tracked).
 
 ### Git
 
-- `origin` → `github.com/vinovator/my-blogs` (your repo); `upstream` → Quartz (pull Quartz updates from here, never push). Default branch is `main`.
-- Because `upstream` is the Quartz engine, keep commits to **content only** unless deliberately integrating Quartz; don't commit a half-applied Quartz scaffold.
+- `origin` → `github.com/vinovator/my-blogs` (the source of truth). Default branch is `main`.
+- An `upstream` remote may still point at a previous generator (Quartz) — it's legacy and slated for removal; don't push to it.
 
 ## Structure & conventions
 
@@ -37,7 +37,7 @@ aliases:
 ---
 ```
 
-### Image embeds (Obsidian/Quartz syntax)
+### Image embeds
 
 Images use Markdown embeds with **URL-encoded relative paths** and an optional leading width integer in the alt text:
 - `![499](Images/Evolution%20of%20Context.png)` — the `499` sets display width.
