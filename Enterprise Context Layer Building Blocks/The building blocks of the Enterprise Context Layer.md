@@ -1,6 +1,6 @@
 ---
 title: The Building Blocks of the Enterprise Context Layer
-description: "Enterprise AI pilots are failing because of a context problem, not weak models. This piece traces how the Enterprise Context Layer emerged as a named infrastructure category and lays out a prescriptive six-layer architecture — from sources of truth to a governance plane — for delivering governed, portable business meaning to AI agents."
+description: Enterprise AI pilots are failing because of a context problem, not weak models. This piece traces how the Enterprise Context Layer emerged as a named infrastructure category and lays out a prescriptive six-layer architecture — from sources of truth to a governance plane — for delivering governed, portable business meaning to AI agents.
 date: 2026-06-26
 tags:
   - AI
@@ -15,6 +15,7 @@ tags:
   - semantic-layer
 aliases:
   - enterprise-context-layer
+slug: building-blocks-of-the-enterprise-context-layer
 ---
 
 The four largest hyperscalers have provided guidance to the market that they would be spending approximately \$700 Billion in 2026 on their capital expenditure, out of which a majority of 2/3rd would be tied to building their AI infrastructure backbone directed almost entirely at compute, data centres and power. According to Goldman Sachs this is expected to grow to a cumulative capex of \$5 Trillion between 2025 and 2030. This is remarkable and uncharacteristic of the typically capital-light software companies the market has been accustomed to since the last decade. This spend doubled from their 2025 levels, and now comfortably outpaces their respective free cash flows which has put their traditional DCF based valuations under pressure. The industry is fundamentally changing, and software majors are building up assets in a way a utility major would do. Amazon's free cash flow is set to turn negative in 2026. Meta's shares fell over 9% the day it raised its spending guidance. Clearly the firms are betting on AI as if their survival depends on it, and taking uncomfortable measures to do so. 
@@ -27,7 +28,7 @@ But what precisely do these "foundational areas" mean? When all these reports st
 A Context Layer is the architectural tier that sits between the AI models or agents and an organisation's data, tools, knowledge and rules. Its job is to assemble, govern and deliver the right information to the model at inference time. It is about translating raw metadata into governed business meaning with provenance trails that make answers auditable. 
 
 ### **How it evolved**
-![499](Images/Evolution%20of%20Context.png)
+![Evolution of the context layer across four phases](images/evolution-of-context.png)
 
 The context layer evolved from an afterthought to a named category in roughly 4 phases. From 2020 to 2022, context simply meant the prompt. RAG was published as a research technique, but production systems mostly relied on prompt engineering. From 2022 to 2024, RAG industrialised. Vector databases (Pinecone, ChromaDB, Qdrant), orchestration frameworks (LangChain, LlamaIndex), function calling from mid-2023, and a long-context arms race that took the range from 4K to over a million tokens all materialised. But so did the realisation that bigger context windows and native retrieval did not solve grounding; they introduced cost, latency and "context rot".
 The third phase, from November 2024, was the protocol era. Anthropic released the Model Context Protocol as an open standard for connecting models to tools and data. OpenAI, Google DeepMind, Microsoft and thousands of teams adopted it. The official MCP registry launched in September 2025 and grew to nearly 2000 entries within months, and in December 2025 Anthropic donated MCP to the Agentic AI Foundation under the Linux Foundation, making it vendor-neutral and community-governed. By late 2025 there were more than 10,000 public MCP Servers deployed. In parallel "context engineering" was coined by Andrej Karpathy and Tobi Lutke as the successor to prompt engineering. Context engineering is the practice of architecting the entire information environment, not just the prompt but memory, tools, retrieval, and state. 
@@ -37,7 +38,7 @@ The fourth phase arrived in 2026, which elevated the context layer to a named ca
 
 The Enterprise context layer, from an opinionated perspective, consists of 6 layers. 
 
-![](Images/Enterprise%20Context%20Layer%20Stack.png)
+![The six-layer Enterprise Context Layer stack](images/enterprise-context-layer-stack.png)
 
 **L1 Sources of truth:** Systems of record, warehouses, data lakes, documents, SaaS and APIs. The layer does not move them. It reads them where they already are.
 
