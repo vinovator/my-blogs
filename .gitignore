@@ -1,0 +1,41 @@
+# macOS (Apple metadata and trash files)
+.DS_Store
+**/.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Windows (Thumbnail caches)
+Thumbs.db
+ehthumbs.db
+
+# Code Editors / Integrated Development Environments (IDEs)
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Node.js & Quartz Specific (Dependencies and build outputs)
+node_modules/
+public/
+.quartz-cache/
+npm-debug.log*
+yarn-error.log*
+
+# Obsidian Specific (Personal vault settings and trash)
+.obsidian/
+.trash/
+
+# Office & Extraneous Documents (Presentations, spreadsheets, and lock files)
+~$*
+*.pptx
+*.ppt
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pdf
+*.zip
