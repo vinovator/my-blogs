@@ -1,5 +1,18 @@
+---
+title: The Building Blocks of the Enterprise Context Layer
+description: "Why 95% of enterprise AI pilots fail — and how the emerging Enterprise Context Layer solves the foundational context problem with a six-layer architecture for governed, portable meaning."
+date: 2026-06-26
+tags:
+  - AI
+  - enterprise-architecture
+  - context-engineering
+  - MCP
+  - knowledge-graphs
+aliases:
+  - enterprise-context-layer
+---
 
-The four largest hyperscalers have provided guidance to the market that they would be spending approximately $700 Billion in 2026 on their capital expenditure, out of which a majority of 2/3rd would be tied to building their AI infrastructure backbone directed almost entirely at compute, data centres and power. According to Goldman Sachs this is expected to grow to a cumulative capex of $5 Trillion between 2025 and 2030. This is remarkable and uncharacteristic of the typically capital-light software companies the market has been accustomed to since the last decade. This spend doubled from their 2025 levels, and now comfortably outpaces their respective free cash flows which has put their traditional DCF based valuations under pressure. The industry is fundamentally changing, and software majors are building up assets in a way a utility major would do. Amazon's free cash flow is set to turn negative in 2026. Meta's shares fell over 9% the day it raised its spending guidance. Clearly the firms are betting on AI as if their survival depends on it, and taking uncomfortable measures to do so. 
+The four largest hyperscalers have provided guidance to the market that they would be spending approximately \$700 Billion in 2026 on their capital expenditure, out of which a majority of 2/3rd would be tied to building their AI infrastructure backbone directed almost entirely at compute, data centres and power. According to Goldman Sachs this is expected to grow to a cumulative capex of \$5 Trillion between 2025 and 2030. This is remarkable and uncharacteristic of the typically capital-light software companies the market has been accustomed to since the last decade. This spend doubled from their 2025 levels, and now comfortably outpaces their respective free cash flows which has put their traditional DCF based valuations under pressure. The industry is fundamentally changing, and software majors are building up assets in a way a utility major would do. Amazon's free cash flow is set to turn negative in 2026. Meta's shares fell over 9% the day it raised its spending guidance. Clearly the firms are betting on AI as if their survival depends on it, and taking uncomfortable measures to do so. 
 
 On the other hand, enterprises around the world are yet to realise value from their AI investments. According to a report from MIT, 95% of enterprise generative-AI pilots show no measurable impact on their P&L. S&P Global found that 42% of firms abandoned most AI initiatives in 2025. Gartner reported that at least 30% of AI POCs fail. All these independent reports converge on the fact that AI initiatives are failing to realize value. The reports also converge on why these AI initiatives fail. MIT names it as a "learning gap" of integration and context, not model quality. Each of the other independent reports blames data, integration and adoption, not the model. According to a Gartner study in 2026, "*organizations that report successful AI initiatives invest up to four times more (as % of revenue) in foundational areas, such as data quality, governance, AI-ready people and change management, compared to those that experience poor outcomes from AI*"
 
@@ -47,7 +60,7 @@ The industry is now converging into a unified synthesis. The scarce asset in ent
 
 ### **References**
 
-- CNBC, "Tech AI spending approaches $700 billion in 2026, cash taking big hit" (February 2026). [https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html](https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html)
+- CNBC, "Tech AI spending approaches \$700 billion in 2026, cash taking big hit" (February 2026). [https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html](https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html)
 
 - Goldman Sachs Research, "Private Markets Are Expected to Have a Growing Role in Data Center Financing" (June 2026). [https://www.goldmansachs.com/insights/articles/private-markets-expected-to-have-growing-role-in-data-center-financing](https://www.goldmansachs.com/insights/articles/private-markets-expected-to-have-growing-role-in-data-center-financing)
 
