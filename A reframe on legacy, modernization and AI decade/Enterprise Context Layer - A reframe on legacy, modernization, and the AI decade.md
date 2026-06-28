@@ -18,7 +18,7 @@ aliases:
   - enterprise-context-layer
 slug: a-reframe-on-legacy-modernization-and-the-ai-decade
 share: true
-draft: true
+draft: false
 ---
 
 **
