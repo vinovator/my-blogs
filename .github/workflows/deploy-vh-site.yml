@@ -1,0 +1,39 @@
+name: Trigger vh-site deploy
+
+# Content for vinothhaldorai.com lives in this repo, but the site (vh-site) is
+# a separate repo connected to Cloudflare Pages. Cloudflare only auto-builds on
+# pushes to vh-site, so a push here would otherwise never reach the live site.
+# This workflow calls a Cloudflare Pages "Deploy Hook" on every push to main,
+# which kicks a fresh vh-site build (it re-pulls this repo via degit at build
+# time). One-time setup: create a Deploy Hook in the Pages project and store its
+# URL as the repo secret CLOUDFLARE_DEPLOY_HOOK_URL.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '.github/**'
+      - 'README.md'
+      - 'CLAUDE.md'
+      - 'LICENSE'
+  workflow_dispatch: {}
+
+jobs:
+  trigger-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Cloudflare Pages deploy hook
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK_URL" ]; then
+            echo "::error::CLOUDFLARE_DEPLOY_HOOK_URL secret is not set. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          status=$(curl -sS -X POST -o /dev/null -w "%{http_code}" "$DEPLOY_HOOK_URL")
+          echo "Deploy hook responded with HTTP $status"
+          if [ "$status" -lt 200 ] || [ "$status" -ge 300 ]; then
+            echo "::error::Deploy hook call failed (HTTP $status)"
+            exit 1
+          fi
+          echo "vh-site build triggered successfully."
