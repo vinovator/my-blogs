@@ -3,15 +3,15 @@ title: The Building Blocks of the Enterprise Context Layer
 description: Enterprise AI pilots are failing because of a context problem, not weak models. This piece traces how the Enterprise Context Layer emerged as a named infrastructure category and lays out a prescriptive six-layer architecture (from sources of truth to a governance plane) for delivering governed, portable business meaning to AI agents.
 date: 2026-06-26
 tags:
-  - AI
+  - ai
   - enterprise-architecture
   - context-engineering
   - context-layer
-  - MCP
+  - mcp
   - knowledge-graphs
-  - GraphRAG
-  - agentic-AI
-  - AI-governance
+  - graphrag
+  - agentic-ai
+  - ai-governance
   - semantic-layer
 aliases:
   - enterprise-context-layer
