@@ -29,7 +29,7 @@ A Context Layer is the architectural tier that sits between the AI models or age
 
 ### **How it evolved**
 
-
+![The evolution of Context Layer](images/evolution-of-context.png)
 
 The context layer evolved from an afterthought to a named category in roughly 4 phases. From 2020 to 2022, context simply meant the prompt. RAG was published as a research technique, but production systems mostly relied on prompt engineering. From 2022 to 2024, RAG industrialised. Vector databases (Pinecone, ChromaDB, Qdrant), orchestration frameworks (LangChain, LlamaIndex), function calling from mid-2023, and a long-context arms race that took the range from 4K to over a million tokens all materialised. But so did the realisation that bigger context windows and native retrieval did not solve grounding; they introduced cost, latency and "context rot".
 The third phase, from November 2024, was the protocol era. Anthropic released the Model Context Protocol as an open standard for connecting models to tools and data. OpenAI, Google DeepMind, Microsoft and thousands of teams adopted it. The official MCP registry launched in September 2025 and grew to nearly 2000 entries within months, and in December 2025 Anthropic donated MCP to the Agentic AI Foundation under the Linux Foundation, making it vendor-neutral and community-governed. By late 2025 there were more than 10,000 public MCP Servers deployed. In parallel "context engineering" was coined by Andrej Karpathy and Tobi Lutke as the successor to prompt engineering. Context engineering is the practice of architecting the entire information environment, not just the prompt but memory, tools, retrieval, and state. 
