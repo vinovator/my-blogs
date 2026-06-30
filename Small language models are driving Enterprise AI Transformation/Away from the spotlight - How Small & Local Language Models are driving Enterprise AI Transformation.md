@@ -8,7 +8,7 @@ tags:
   - ai-compliance
   - small-language-models
   - generative-ai
-  - SLM
+  - slm
   - digital-transformation
 aliases:
   - small-local-language-models
